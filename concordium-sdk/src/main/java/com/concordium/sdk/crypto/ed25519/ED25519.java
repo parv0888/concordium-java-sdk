@@ -53,6 +53,17 @@ final class ED25519 {
         return ED25519PublicKey.from(buff);
     }
 
+    static byte[] encrypted_transfer_support(String input) throws Exception {
+        val buff = new byte[10000];
+        val resultCode = generateEncryptedTransfer(input, buff);
+        if (resultCode > 0) {
+            val errString = new java.lang.String(buff);
+            throw new Exception("Error: " + errString + ", ErrorCode: " + resultCode);
+        }
+
+        return buff;
+    }
+
     private static native int sign(byte[] privateKey, byte[] message, byte[] out);
 
     private static native int verify(byte[] publicKey, byte[] message, byte[] signature);
@@ -60,4 +71,6 @@ final class ED25519 {
     private static native int generateSecretKey(byte[] buffer);
 
     private static native int generatePublicKey(byte[] secretKey, byte[] buffer);
+
+    private static native int generateEncryptedTransfer(String input, byte[] buffer);
 }

@@ -35,4 +35,15 @@ public class TransactionFactory {
     public static RegisterDataTransaction.RegisterDataTransactionBuilder newRegisterData() {
         return RegisterDataTransaction.builder();
     }
+
+    /**
+     * Creates a new {@link EncryptedTransferTransaction.EncryptedTransferTransactionBuilder} for
+     * creating a {@link EncryptedTransferTransaction}
+     *
+     * @return the builder for a {@link EncryptedTransferTransaction}
+     */
+    public static EncryptedTransferTransaction.EncryptedTransferTransactionBuilder newEncryptedTransfer() {
+        return EncryptedTransferTransaction.builder();
+    }
+
 }
