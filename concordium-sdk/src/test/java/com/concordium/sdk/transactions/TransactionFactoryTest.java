@@ -43,4 +43,10 @@ public class TransactionFactoryTest {
         val builder = TransactionFactory.newDeployModule();
         assertNotNull(builder);
     }
+
+    @Test
+    public  void testCanUpdateCredentialsFactory() {
+        val builder = TransactionFactory.newUpdateCredentials();
+        assertNotNull(builder);
+    }
 }

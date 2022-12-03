@@ -95,6 +95,7 @@ public abstract class Payload {
         INIT_CONTRACT,
         DEPLOY_MODULE,
         UPDATE,
+        UPDATE_CREDENTIALS,
     }
 
 }

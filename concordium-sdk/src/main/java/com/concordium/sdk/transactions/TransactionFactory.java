@@ -67,4 +67,14 @@ public class TransactionFactory {
         return DeployModuleTransaction.builder();
     }
 
+    /**
+     * Creates a new {@link UpdateCredentialsTransaction.UpdateCredentialsTransactionBuilder} for
+     * creating a {@link UpdateCredentialsTransaction}
+     *
+     * @return the builder for a {@link UpdateCredentialsTransaction}
+     */
+    public static UpdateCredentialsTransaction.UpdateCredentialsTransactionBuilder newUpdateCredentials() {
+        return UpdateCredentialsTransaction.builder();
+    }
+
 }
